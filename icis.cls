@@ -14,7 +14,9 @@
 \RequirePackage{fontspec}
 \RequirePackage{xunicode}
 \RequirePackage{graphicx}
-\RequirePackage[labelsep=period,font=bf]{caption}   % Replace caption colon with period
+\RequirePackage[labelsep=period,font=bf]{caption}   % Replace caption colon with
+                                % period
+\RequirePackage[margin=0.75in]{geometry}
 
 \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont{Georgia}
@@ -36,7 +38,11 @@
 
 % TODO: Fix header
 %       * Font size: 9. Italic, left aligned
+%       * First page: no header
+%       * Even page: Track title
+%       * Odd page: Short title (8 words)
 % TODO: Fix footer
+%       * Font size: 9., Alternate alignment by page
 %       * Thirty Fifth International Conference on Information Systems, Auckland
 %       2014 [page num]
 %       * Thirt... italic
