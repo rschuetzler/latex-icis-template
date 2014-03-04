@@ -14,3 +14,6 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+*.aux
+*.log
+*.pdf
