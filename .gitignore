@@ -17,3 +17,5 @@ $RECYCLE.BIN/
 *.aux
 *.log
 *.pdf
+*.bbl
+*.blg

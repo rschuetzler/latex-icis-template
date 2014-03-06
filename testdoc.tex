@@ -8,6 +8,23 @@
 \shorttitle{This is my test title}
 \track{Human-computer Interaction}
 
+\usepackage[
+    authoryear,
+    sort,
+]{natbib}
+
+\setcitestyle{aysep={}}
+
+% \renewbibmacro*{volume+number+eid}{%
+%   \printtext[parens]{%
+%     \printfield{volume}%
+%     \setunit*{\addcolon}%
+%     \printfield{number}%
+%   }
+%   \setunit{\addcomma\space}%
+%   \printfield{eid}%
+% }
+
 \begin{document}
 
 
@@ -21,6 +38,18 @@ way to use this template is to replace the placeholder content with your own
 material. The template file contains specially formatted styles (e.g.,
 \texttt{Normal, Heading, Bullet, References, Title, Author, Affiliation}) that
 are designed to reduce the work in formatting your final submission.
+
+\section{Citations}
+
+Citations should be done in the MISQ style. For direction, see the MISQ website
+(http://www.misq.org/manuscript-guidelines), specifically the section on the
+MISQ references format. Getting bibtex to do that is one goal of this
+template. This is a test citation of a single author book
+\citep{bonini_simulation_1963}, and a two author book section
+\citep{chenhall_formal_1989}. Next comes the scary 4 author et
+al. \citep{zhang2006}, and a multi-cite cite \citep{bonini_simulation_1963,
+  ackoff_management_1961}. Check the references section at the end to see if
+these are properly arranged.
 
 \section{Page Size}
 On each page, your material (not including the header and footer) should fit
@@ -148,5 +177,9 @@ international audience, please pay attention to the following:
   gendered words (chairman, manpower, man-months). Use inclusive language that
   is gender-neutral (e.g., they, s/he, chair, staff, staff-hours, person-years).
 \end{itemize}
+
+\section{References}
+\bibliographystyle{misq}
+\bibliography{references}
 
 \end{document}
