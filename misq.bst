@@ -221,6 +221,13 @@ FUNCTION {tie.or.space.prefix}
 FUNCTION {capitalize}
 { "u" change.case$ "t" change.case$ }
 
+FUNCTION {parenthesize}
+{ duplicate$ empty$
+  {pop$ "" }
+  {"(" swap$ * ")" *}
+  if$
+}
+
 FUNCTION {space.word}
 { " " swap$ * " " * }
  % Here are the language-specific definitions for explicit words.
@@ -972,6 +979,7 @@ FUNCTION {format.vol.num.pages}
       ":" swap$ *
     }
   if$ *
+  parenthesize
   eid empty$
     { format.journal.pages }
     { format.journal.eid }
