@@ -17,3 +17,6 @@ options in your TeX file. These are demonstrated in `testdoc.tex`.
 \shorttitle{}     % Give this document a short title (8 words or fewer)
 \track{}          % Indicate which track this will go to.
 ```
+
+### Incomplete tasks
+* Get BibLaTeX to comply with the MISQ citation style
