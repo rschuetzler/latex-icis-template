@@ -8,6 +8,12 @@ family
 * You must have the Georgia font installed
 
 ## Use
-For now, simply set `\documentclass{icis}` and put this file the directory with
-your main LaTeX document. There may be other options in the future, but that's
-it for now.
+Set `\documentclass{icis}` and put this file the directory with
+your main LaTeX document. In order to fill the template, you need to set a few
+options in your TeX file. These are demonstrated in `testdoc.tex`.
+
+```latex
+\researchtype{}   % Indicate whether this is Completed Research or Research in Progress
+\shorttitle{}     % Give this document a short title (8 words or fewer)
+\track{}          % Indicate which track this will go to.
+```
