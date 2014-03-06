@@ -41,10 +41,15 @@
 \let\@shorttitle\@empty
 \let\@track\@empty
 
-% TODO: Make this work. Not sure why it's outputting the variable definition
-\newcommand{\researchtype}[1][Completed Research]{\gdef\@researchtype{#1}}
-\newcommand{\shorttitle}[1][8 words or less]{\gdef\@shorttitle{#1}}
-\newcommand{\track}[1][Human Computer Interaction]{\gdef\@track{#1}}
+% % TODO: Make this work. Not sure why it's outputting the variable definition
+% \newcommand*{\@researchtype}{}
+% \newcommand*{\researchtype}[1]{\renewcommand*{\@researchtype}{#1}}
+\newcommand{\researchtype}[1]{\gdef\@researchtype{#1}}
+\newcommand{\shorttitle}[1]{\gdef\@shorttitle{#1}}
+\newcommand{\track}[1]{\gdef\@track{#1}}
+
+% Second attempt at making short-title work. Or research type. Don't care
+
 
 
 % TODO: Fix the title
