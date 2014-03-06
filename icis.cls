@@ -16,7 +16,9 @@
 \RequirePackage{graphicx}
 \RequirePackage[labelsep=period,font=bf]{caption}   % Replace caption colon with
                                 % period
-\RequirePackage[margin=0.75in]{geometry}
+\RequirePackage[margin=1in]{geometry}
+% \RequirePackage[total={7in,9.25in},top=0.75in,paper=letterpaper]{geometry}
+\RequirePackage{fancyhdr}
 
 % Get rid of spacing inside lists
 \RequirePackage{enumitem}
@@ -31,46 +33,34 @@
 \renewcommand{\LARGE}{\fontsize{13pt}{15pt}\selectfont}
 \renewcommand{\Large}{\fontsize{12pt}{14pt}\selectfont}
 \renewcommand{\large}{\fontsize{11pt}{13pt}\selectfont}
-\setlength{\textwidth}{7in}
-\setlength{\textheight}{9.25in}
+% \setlength{\textwidth}{7in}
+% \setlength{\textheight}{9.25in}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
 
 
+% These are variables set in the frontmatter of the document
+% Not exactly sure if I need this step, but it was in the example I found.
 \let\@researchtype\@empty
 \let\@shorttitle\@empty
 \let\@track\@empty
 
-% % TODO: Make this work. Not sure why it's outputting the variable definition
-% \newcommand*{\@researchtype}{}
-% \newcommand*{\researchtype}[1]{\renewcommand*{\@researchtype}{#1}}
 \newcommand{\researchtype}[1]{\gdef\@researchtype{#1}}
 \newcommand{\shorttitle}[1]{\gdef\@shorttitle{#1}}
 \newcommand{\track}[1]{\gdef\@track{#1}}
 
-% Second attempt at making short-title work. Or research type. Don't care
-
-
-
-% TODO: Fix the title
 \renewcommand{\maketitle}{%
   \begin{center} %
     {\Huge\bfseries\@title\par}
     {\Large\itshape\@researchtype\par}
   \end{center}
+  \thispagestyle{plain}\@thanks
+  \fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyfoot[R]{\textit{Thirty Fifth International Conference on Information Systems, %
+              Auckland 2014}\hspace{5mm}\textbf{\thepage}}
+  }
 }
-
-% TODO: Fix header
-%       * Font size: 9. Italic, left aligned
-%       * First page: no header
-%       * Even page: Track title
-%       * Odd page: Short title (8 words)
-% TODO: Fix footer
-%       * Font size: 9., Alternate alignment by page
-%       * Thirty Fifth International Conference on Information Systems, Auckland
-%       2014 [page num]
-%       * Thirt... italic
-%       * Page num: bold
 
 % TODO: Figure out citation style. Of course, MISQ doesn't use APA. 
 
@@ -92,3 +82,17 @@
     {4pt}{\bfseries}%
 }
 \setcounter{secnumdepth}{0}
+
+% Header and footer info
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\textit{\@shorttitle}}
+\fancyhead[LE]{\textit{\@track}}
+\fancyfoot[RO]{\textit{Thirty Fifth International Conference on Information Systems, %
+              Auckland 2014}\hspace{5mm}\textbf{\thepage}}
+\fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Fifth International Conference on Information Systems, %
+              Auckland 2014}}
+
+% Get rid of the horizontal rules
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
