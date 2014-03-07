@@ -98,29 +98,3 @@
 % Get rid of the horizontal rules
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Getting references to work will go here
-% TODO: Get MISQ reference format
-
-% in text cites: (Jones et al. 1995; Smith 1996)
-% Sorted alphabetically
-% One author: (Smith 1996)
-% Two authors: (Zghaibeh and Anagnostakis 2007)
-% Three or more: (Golle et al. 2001)
-
-% Bibliography: no et al. EVER!
-% Journal:
-% Zack, M. H., and McKenney, J. L. 1995. "Social Context and Interaction in
-% Ongoing Computer-Supported Management Groups," \textit{Organization Science}
-% (6:4), pp. 394-422.
-
-% Book:
-% Strauss, A., and Corbin, J. 1998. \textit{Basics of Qualitative Research:
-% Techniques and Procedures for Developing Grounded Theory (2\super{nd} ed.), Thousand
-% Oaks, CA: Sage Publications.
-
-% Conference:
-% Zhang, X., Vogel, D., Chen, Z., and Yuan, M. 2006. "Is Reward Always Effective
-% as Incentive in Electronic Knowledge Repositories? A Game-Theoretical
-% Perspective," in \textit{Proceedings of the 12\super{th} Americas Conference
-% on Information Systems, August 4-6, Acapulco, Mexico.
