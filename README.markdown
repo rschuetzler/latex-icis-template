@@ -17,6 +17,27 @@ options in your TeX file. These are demonstrated in `testdoc.tex`.
 \shorttitle{}     % Give this document a short title (8 words or fewer)
 \track{}          % Indicate which track this will go to.
 ```
+At the end of your document, put the following to place your references section
+and use the `misq.bst` file.
 
-### Incomplete tasks
-* Get BibLaTeX to comply with the MISQ citation style
+```latex
+\bibliographystyle{misq}
+\bibliography{references}
+```
+
+## Recommendations
+
+In addition to the usage requirements above, I have a few recommendations to
+make using this as simple as possible.
+
+1. Use Natbib for citing. It lets you do nice things with citations in an easily
+   understandable way. While I believe the `misq.bst` file will work for
+   biblatex, I've only tested with Natbib.
+2. If you use Natbib, put this in your document head to conform with MISQ style,
+   as in the example LaTeX document:
+
+```latex
+\usepackage[authoryear,sort]{natbib}
+
+\setcitestyle{aysep={}}
+```
