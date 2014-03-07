@@ -1,5 +1,5 @@
 # Description
-This is a work-in-progress LaTeX template meeting the submission requirements
+This is a LaTeX template meeting the submission requirements
 for the International Conference on Information Systems.
 
 ## Requirements
@@ -8,7 +8,7 @@ family
 * You must have the Georgia font installed on the compiling computer
 
 ## Use
-Set `\documentclass{icis}` and put this file the directory with
+Set `\documentclass{icis}` and put `icis.cls` and `misq.bst` in the directory with
 your main LaTeX document. In order to fill the template, you need to set a few
 options in your TeX file. These are demonstrated in `testdoc.tex`.
 
@@ -30,9 +30,9 @@ and use the `misq.bst` file.
 In addition to the usage requirements above, I have a few recommendations to
 make using this as simple as possible.
 
-1. Use Natbib for citing. It lets you do nice things with citations in an easily
-   understandable way. While I believe the `misq.bst` file will work for
-   biblatex, I've only tested with Natbib.
+1. Use Natbib for in-text citations. It lets you do nice things with citations
+   in an easily understandable way. While I believe the `misq.bst` file will
+   work for biblatex, I've only tested with Natbib.
 2. If you use Natbib, put this in your document head to conform with MISQ style,
    as in the example LaTeX document:
 
