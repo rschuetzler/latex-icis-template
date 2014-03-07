@@ -1025,12 +1025,17 @@ FUNCTION {format.booktitle}
 FUNCTION {format.in.ed.booktitle}
 { format.booktitle duplicate$ empty$ 'skip$
     {
+	  format.bvolume duplicate$ empty$ 'pop$
+	    { ", " swap$ * * }
+	  if$
+	  ", " *
       editor "editor" format.names.ed duplicate$ empty$ 'pop$
         {
-          " " *
+          % ", " *
           get.bbl.editor
-          "(" swap$ * "), " *
+          " (" swap$ * ")" *
           * swap$
+		  swap$
           * }
       if$
       word.in swap$ *
@@ -1218,7 +1223,7 @@ FUNCTION {inbook}
   if$
   format.edition output
   % new.block
-  format.pages "pages" output.check
+  % format.pages "pages" output.check
   format.note output
   fin.entry
   write.url
@@ -1247,7 +1252,7 @@ FUNCTION {incollection}
     }
   if$
   % new.block
-  format.pages "pages" output.check
+  % format.pages "pages" output.check
   format.note output
   fin.entry
   write.url
@@ -1279,7 +1284,7 @@ FUNCTION {inproceedings}
     }
   if$
   % new.block
-  format.pages "pages" output.check
+  % format.pages "pages" output.check
   format.note output
   fin.entry
   write.url
