@@ -8,6 +8,7 @@
 % Must have the following two lines at the top of your document
 % %!TEX TS-program = xelatex
 % %!TEX encoding = UTF-8 Unicode
+% Or you must manually choose to compile with XeLaTeX
 
 % These 3 are required to use the Georgia font family
 \RequirePackage{xltxtra}

@@ -3,9 +3,9 @@ This is a work-in-progress LaTeX template meeting the submission requirements
 for the International Conference on Information Systems.
 
 ## Requirements
-* Document must be compiled with XeLaTeX in order to support the Georgia font
+* Document MUST be compiled with XeLaTeX in order to support the Georgia font
 family
-* You must have the Georgia font installed
+* You must have the Georgia font installed on the compiling computer
 
 ## Use
 Set `\documentclass{icis}` and put this file the directory with
