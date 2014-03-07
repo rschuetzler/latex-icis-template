@@ -146,7 +146,7 @@ FUNCTION {add.blank}
 
 FUNCTION {date.block}
 {
-  new.block
+  new.sentence
 }
 
 FUNCTION {not}
@@ -588,10 +588,20 @@ FUNCTION {format.title}
   duplicate$ empty$ 'skip$
     {
       "\enquote{" swap$ *
-      add.period$ "}" *
+	  non.stop
+	    { ",} " * }
+		{ "} " *}
+		if$
     }
   if$
 }
+FUNCTION {end.quote.title}
+{ title empty$
+  'skip$
+  { before.all 'output.state := }
+  if$
+}
+
 FUNCTION {format.full.names}
 {'s :=
  "" 't :=
@@ -762,7 +772,7 @@ FUNCTION {n.dashify}
 }
 
 FUNCTION {word.in}
-{ bbl.in capitalize
+{ bbl.in %capitalize
   " " * }
 
 FUNCTION {format.date}
@@ -775,7 +785,8 @@ FUNCTION {format.date}
   if$
   extra.label *
   before.all 'output.state :=
-  after.sentence 'output.state :=
+  % after.sentence 'output.state :=
+  " " swap$ *
 }
 FUNCTION {format.btitle}
 { title "title" bibinfo.check
@@ -1102,7 +1113,8 @@ FUNCTION {article}
   format.date "year" output.check
   date.block
   format.title "title" output.check
-  new.block
+  % new.block
+  end.quote.title
   crossref missing$
     {
       journal
@@ -1140,18 +1152,18 @@ FUNCTION {book}
   format.btitle "title" output.check
   crossref missing$
     { format.bvolume output
-      new.block
-      new.sentence
+      % new.block
+      % new.sentence
       format.number.series output
       format.publisher.address output
     }
     {
-      new.block
+      % new.block
       format.book.crossref output.nonnull
     }
   if$
   format.edition output
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1163,10 +1175,11 @@ FUNCTION {booklet}
   format.date "year" output.check
   date.block
   format.title "title" output.check
-  new.block
+  % new.block
+  end.quote.title
   howpublished "howpublished" bibinfo.check output
   address "address" bibinfo.check output
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1194,17 +1207,18 @@ FUNCTION {inbook}
       format.publisher.address output
       format.bvolume output
       format.chapter.pages "chapter and pages" output.check
-      new.block
-      new.sentence
+      % new.block
+      % new.sentence
     }
     {
       format.chapter.pages "chapter and pages" output.check
-      new.block
+      % new.block
       format.book.crossref output.nonnull
     }
   if$
   format.edition output
-  new.block
+  % new.block
+  format.pages "pages" output.check
   format.note output
   fin.entry
   write.url
@@ -1217,21 +1231,23 @@ FUNCTION {incollection}
   format.date "year" output.check
   date.block
   format.title "title" output.check
-  new.block
+  % new.block
+  end.quote.title
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
       format.number.series output
       format.publisher.address output
       format.bvolume output
       format.chapter.pages output
-      new.sentence
+      % new.sentence
       format.edition output
     }
     { format.incoll.inproc.crossref output.nonnull
       format.chapter.pages output
     }
   if$
-  new.block
+  % new.block
+  format.pages "pages" output.check
   format.note output
   fin.entry
   write.url
@@ -1243,10 +1259,11 @@ FUNCTION {inproceedings}
   format.date "year" output.check
   date.block
   format.title "title" output.check
-  new.block
+  % new.block
+  end.quote.title
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
-      new.sentence
+      % new.sentence
       format.number.series output
       publisher empty$
         { format.organization.address output }
@@ -1255,13 +1272,14 @@ FUNCTION {inproceedings}
         }
       if$
       format.bvolume output
-      format.pages output
+      % format.pages output
     }
     { format.incoll.inproc.crossref output.nonnull
-      format.pages output
+      % format.pages output
     }
   if$
-  new.block
+  % new.block
+  format.pages "pages" output.check
   format.note output
   fin.entry
   write.url
@@ -1274,14 +1292,14 @@ FUNCTION {manual}
   format.date "year" output.check
   date.block
   format.btitle "title" output.check
-  organization address new.block.checkb
+  % organization address new.block.checkb
   organization "organization" bibinfo.check output
   address "address" bibinfo.check output
   format.edition output
-  new.block
+  % new.block
   format.note output
   fin.entry
-  write.url
+  % write.url
 }
 
 FUNCTION {mastersthesis}
@@ -1292,11 +1310,11 @@ FUNCTION {mastersthesis}
   date.block
   format.btitle
   "title" output.check
-  new.block
+  % new.block
   bbl.mthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1309,9 +1327,10 @@ FUNCTION {misc}
   format.date "year" output.check
   date.block
   format.title output
-  new.block
+  end.quote.title
+  % new.block
   howpublished "howpublished" bibinfo.check output
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1324,11 +1343,11 @@ FUNCTION {phdthesis}
   date.block
   format.btitle
   "title" output.check
-  new.block
+  % new.block
   bbl.phdthesis format.thesis.type output.nonnull
   school "school" bibinfo.warn output
   address "address" bibinfo.check output
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1342,7 +1361,7 @@ FUNCTION {proceedings}
   date.block
   format.btitle "title" output.check
   format.bvolume output
-  new.sentence
+  % new.sentence
   format.number.series output
   publisher empty$
     { format.organization.address output }
@@ -1350,7 +1369,7 @@ FUNCTION {proceedings}
       format.publisher.address output
     }
   if$
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1364,11 +1383,12 @@ FUNCTION {techreport}
   date.block
   format.title
   "title" output.check
-  new.block
+  % new.block
+  end.quote.title
   format.tr.number output.nonnull
   institution "institution" bibinfo.warn output
   address "address" bibinfo.check output
-  new.block
+  % new.block
   format.note output
   fin.entry
   write.url
@@ -1381,7 +1401,8 @@ FUNCTION {unpublished}
   format.date "year" output.check
   date.block
   format.title "title" output.check
-  new.block
+  % new.block
+  end.quote.title
   format.note "note" output.check
   fin.entry
   write.url
