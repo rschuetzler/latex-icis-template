@@ -1,6 +1,6 @@
 # Description
 This is a LaTeX template meeting the submission requirements
-for the International Conference on Information Systems.
+for the 2014 International Conference on Information Systems.
 
 ## Requirements
 * Document MUST be compiled with XeLaTeX in order to support the Georgia font
