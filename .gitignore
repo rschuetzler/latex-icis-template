@@ -20,3 +20,6 @@ $RECYCLE.BIN/
 *.bbl
 *.blg
 testdoc.synctex.gz
+
+# ignore auto-generated auctex files
+auto/*
