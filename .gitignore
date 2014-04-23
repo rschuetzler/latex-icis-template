@@ -23,3 +23,6 @@ testdoc.synctex.gz
 
 # ignore auto-generated auctex files
 auto/*
+*.bcf
+*.out
+*.run.xml
