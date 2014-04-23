@@ -25,6 +25,19 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep}
 
+\RequirePackage[backend=biber,
+sorting = nyt,
+style = authoryear,
+% style = misq, in progress. Create misq.bbx and misq.cbx
+sortcites=true,
+maxcitenames=2,
+mincitenames=1,
+maxbibnames=100,
+autocite=inline,
+block=space, %unsure about this one. hopefully it will be in the style
+hyperref=true, %unsure about this too.
+]{biblatex}
+
 \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont[Ligatures={Common,TeX}]{Georgia}
 % \setromanfont[Numbers=Uppercase]{Georgia}
@@ -99,3 +112,8 @@
 % Get rid of the horizontal rules
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+% Bibliography stuff
+\renewcommand{\bibnamedelimi}{. }
+\renewcommand{\bibnamedelima}{.}
+\renewcommand{\bibnamedelimb}{.}
