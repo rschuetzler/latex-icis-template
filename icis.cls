@@ -34,7 +34,7 @@ maxcitenames=2,
 mincitenames=1,
 maxbibnames=100,
 autocite=inline,
-block=space, %unsure about this one. hopefully it will be in the style
+block=none, %unsure about this one. hopefully it will be in the style
 hyperref=true, %unsure about this too.
 ]{biblatex}
 
