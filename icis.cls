@@ -28,11 +28,15 @@
 \RequirePackage[backend=biber,
 sorting = nyt,
 style = authoryear,
-% style = misq, in progress. Create misq.bbx and misq.cbx
 sortcites=true,
 maxcitenames=2,
 mincitenames=1,
 maxbibnames=100,
+date=year,
+url=false,
+isbn=false,
+doi=false,
+terseinits=false,
 autocite=inline,
 block=none, %unsure about this one. hopefully it will be in the style
 hyperref=true, %unsure about this too.
