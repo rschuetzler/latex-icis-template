@@ -2,6 +2,10 @@
 This is a LaTeX template meeting the submission requirements
 for the 2014 International Conference on Information Systems.
 
+For new documents, I'd recommend using the biblatex branch of this
+repository. I've rewritten the MISQ style using biblatex, which should be more
+robust, and easier to fix in the future. Plus, biblatex is just cooler.
+
 ## Requirements
 * Document MUST be compiled with XeLaTeX in order to support the Georgia font
 family
