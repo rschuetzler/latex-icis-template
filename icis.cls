@@ -40,6 +40,9 @@ firstinits=true,
 doi=false,
 terseinits=false,
 autocite=inline,
+uniquename=false,
+dashed=false,
+uniquelist=false,
 block=none, %unsure about this one. hopefully it will be in the style
 hyperref=true, %unsure about this too.
 ]{biblatex}
