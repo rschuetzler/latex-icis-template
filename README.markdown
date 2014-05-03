@@ -41,3 +41,24 @@ make using this as simple as possible.
 
 \setcitestyle{aysep={}}
 ```
+
+## Ubuntu Specific Recommendations 
+
+To use the Georgia font, you need to install the MS core fonts:
+
+> sudo apt-get install msttcorefonts
+
+For some reason, XeLaTeX complains about a line in the cls file: 
+
+> ! Package xkeyval Error: `TeX' undefined in families `Ligatures'.
+
+I replaced:
+
+> \setmainfont[Ligatures={Common,TeX}]{Georgia}
+
+with 
+
+> \setmainfont{Georgia}
+
+and it compiled without problems. 
+
