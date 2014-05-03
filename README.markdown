@@ -55,7 +55,10 @@ For some reason, XeLaTeX complains about a line in the cls file:
 I replaced:
 
 > \setmainfont[Ligatures={Common,TeX}]{Georgia}
+
 with 
+
 > \setmainfont{Georgia}
-it compiled without problems. 
+
+and it compiled without problems. 
 
