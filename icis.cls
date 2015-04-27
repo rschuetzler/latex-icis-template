@@ -25,6 +25,28 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep}
 
+\RequirePackage[backend=biber,
+sorting=nyt,
+style=authoryear,
+% style=apa,
+sortcites=true,
+maxcitenames=2,
+mincitenames=1,
+maxbibnames=100,
+date=year,
+url=false,
+isbn=false,
+firstinits=true,
+doi=false,
+terseinits=false,
+autocite=inline,
+uniquename=false,
+dashed=false,
+uniquelist=false,
+block=none, %unsure about this one. hopefully it will be in the style
+hyperref=true, %unsure about this too.
+]{biblatex}
+
 \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont[Ligatures={Common,TeX}]{Georgia}
 % \setromanfont[Numbers=Uppercase]{Georgia}
@@ -99,3 +121,8 @@
 % Get rid of the horizontal rules
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+% Bibliography stuff
+\renewcommand{\bibnamedelimi}{. }
+\renewcommand{\bibnamedelima}{.}
+\renewcommand{\bibnamedelimb}{.}

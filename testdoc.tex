@@ -10,12 +10,11 @@
 \shorttitle{This is my test title}
 \track{Human-computer Interaction}
 
-\usepackage[authoryear,sort]{natbib}
 
-\setcitestyle{aysep={}}
+\usepackage{hyperref}
+\addbibresource{references.bib}
 
 \begin{document}
-
 
 \maketitle
 
@@ -34,9 +33,9 @@ Citations should be done in the MISQ style. For direction, see the MISQ website
 (http://www.misq.org/manuscript-guidelines), specifically the section on the
 MISQ references format. Getting bibtex to do that is one goal of this
 template. This is a test citation of a single author book
-\citep{bonini_simulation_1963}, and a two author book section
-\citep{chenhall_formal_1989}. Next comes the scary 4 author et
-al. \citep{zhang2006}, and a multi-cite cite \citep{bonini_simulation_1963,
+\autocite{bonini_simulation_1963}, and a two author book section
+\autocite{chenhall_formal_1989}. Next comes the scary 4 author et
+al. \autocite{zhang2006}, and a multi-cite cite \autocite{bonini_simulation_1963,
   ackoff_management_1961}. Check the references section at the end to see if
 these are properly arranged.
 
@@ -167,7 +166,9 @@ international audience, please pay attention to the following:
   is gender-neutral (e.g., they, s/he, chair, staff, staff-hours, person-years).
 \end{itemize}
 
-\bibliographystyle{misq}
-\bibliography{references}
+% \bibliographystyle{misq}
+% \bibliography{references}
+
+\printbibliography
 
 \end{document}
