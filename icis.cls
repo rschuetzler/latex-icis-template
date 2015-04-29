@@ -3,7 +3,7 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[10pt,twoside,letterpaper]{article}
+\LoadClass[10pt,letterpaper]{article}
 
 % Must have the following two lines at the top of your document
 % %!TEX TS-program = xelatex
@@ -105,16 +105,17 @@ hyperref=true, %unsure about this too.
 % Header and footer info
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[RO]{\textit{\@shorttitle}}
-\fancyhead[LE]{\textit{\@track}}
-\fancyfoot[RO]{\textit{Thirty Sixth International Conference on Information Systems, %
+\fancyhead[R]{\textit{\@shorttitle}}
+% \fancyhead[LE]{\textit{\@track}}
+\fancyfoot[R]{\textit{Thirty Sixth International Conference on Information Systems, %
               Fort Worth 2015}\hspace{5mm}\textbf{\thepage}}
-\fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Sixth International Conference on Information Systems, %
-              Fort Worth 2015}}
+% \fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Sixth International Conference on Information Systems, %
+%               Fort Worth 2015}}
 
 % No header on the first page. Only a footer
 \fancypagestyle{plain}{
     \fancyhf{}
+    \fancyhead[R]{\textit{\@shorttitle}}
     \fancyfoot[R]{\textit{Thirty Sixth International Conference on Information Systems, %
               Fort Worth 2015}\hspace{5mm}\textbf{\thepage}}
   }
