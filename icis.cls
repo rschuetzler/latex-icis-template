@@ -34,6 +34,7 @@ mincitenames=1,
 maxbibnames=100,
 date=year,
 url=false,
+urldate=long,
 isbn=false,
 firstinits=true,
 doi=false,
@@ -60,6 +61,7 @@ hyperref=true, %unsure about this too.
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt}
 
+\urlstyle{rm}
 
 % These are variables set in the frontmatter of the document
 % Not exactly sure if I need this step, but it was in the example I found.
