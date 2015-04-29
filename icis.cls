@@ -126,5 +126,5 @@ hyperref=true, %unsure about this too.
 
 % Bibliography stuff
 \renewcommand{\bibnamedelimi}{. }
-\renewcommand{\bibnamedelima}{.}
-\renewcommand{\bibnamedelimb}{.}
+% \renewcommand{\bibnamedelima}{.}
+% \renewcommand{\bibnamedelimb}{.}
