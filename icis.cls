@@ -28,7 +28,6 @@
 \RequirePackage[backend=biber,
 sorting=nyt,
 style=authoryear,
-% style=apa,
 sortcites=true,
 maxcitenames=2,
 mincitenames=1,
@@ -47,7 +46,7 @@ block=none, %unsure about this one. hopefully it will be in the style
 hyperref=true, %unsure about this too.
 ]{biblatex}
 
-\defaultfontfeatures{Scale=MatchLowercase}
+% \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont[Ligatures={Common,TeX}]{Georgia}
 % \setromanfont[Numbers=Uppercase]{Georgia}
 
@@ -106,16 +105,16 @@ hyperref=true, %unsure about this too.
 \fancyhf{}
 \fancyhead[RO]{\textit{\@shorttitle}}
 \fancyhead[LE]{\textit{\@track}}
-\fancyfoot[RO]{\textit{Thirty Fifth International Conference on Information Systems, %
-              Auckland 2014}\hspace{5mm}\textbf{\thepage}}
-\fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Fifth International Conference on Information Systems, %
-              Auckland 2014}}
+\fancyfoot[RO]{\textit{Thirty Sixth International Conference on Information Systems, %
+              Fort Worth 2015}\hspace{5mm}\textbf{\thepage}}
+\fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Sixth International Conference on Information Systems, %
+              Fort Worth 2015}}
 
 % No header on the first page. Only a footer
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyfoot[R]{\textit{Thirty Fifth International Conference on Information Systems, %
-              Auckland 2014}\hspace{5mm}\textbf{\thepage}}
+    \fancyfoot[R]{\textit{Thirty Sixth International Conference on Information Systems, %
+              Fort Worth 2015}\hspace{5mm}\textbf{\thepage}}
   }
 
 % Get rid of the horizontal rules
