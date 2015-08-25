@@ -2,6 +2,15 @@
 This is a LaTeX template meeting the submission requirements
 for the 2015 International Conference on Information Systems.
 
+## Notes
+
+There are two template files included here. The first (`icis.cls`) is a fully compliant
+template for submitting anonymous drafts for review. The second (`icisfinal.cls`) is final
+submission template, for which the author information and abstract are designed to be
+included in the file. Follow the example of `testdoc.tex` for how to include abstract,
+author, and keywords in the final submission. For the initial submission (for review),
+remove the author table and abstract block.
+
 ## Requirements
 * Document MUST be compiled with XeLaTeX in order to support the Georgia font
 family

@@ -10,26 +10,31 @@
 \shorttitle{This is my test title}
 \track{Human-computer Interaction}
 
-\author{
-  \textbf{Ryan Schuetzler}\\
-  University of Nebraska at Omaha\\
-  rschuetzler@unomaha.edu
-  \and
-  \textbf{Test Author II}\\
-  University of Arizona\\
-  test@arizona.edu
-  \and
-  \textbf{Test Author III}\\
-  University of Idaho\\
-  test@idaho.edu
-}
-
 \usepackage[hidelinks]{hyperref}
 \addbibresource{references.bib}
+
+\usepackage{tabularx}  % To have the table fill out the page
 
 \begin{document}
 
 \maketitle
+
+% This is how you can force authors into the required template.
+% Note the extra line between rows of authors to provide appropriate spacing
+% The multicolumn at the bottom is only needed for odd numbers of authors
+\begin{table}[h!]
+  \centering
+  \LARGE
+  \begin{tabularx}{\textwidth}{@{}*2{>{\centering\arraybackslash}X}@{}}
+    \textbf{Ryan Schuetzler}        & \textbf{Test Author II} \\
+    University of Nebraska at Omaha & University of Arizona   \\
+    rschuetzler@unomaha.edu & test@arizona.edu \\
+    \\
+    \multicolumn{2}{c}{\textbf{Test Author III}} \\
+    \multicolumn{2}{c}{University of Awesome} \\
+    \multicolumn{2}{c}{everythingis@awesome.com} \\
+  \end{tabularx}
+\end{table}
 
 \begin{abstract}
   All information about the formatting requirements is contained in this document. Please
