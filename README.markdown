@@ -1,6 +1,6 @@
 # Description
 This is a LaTeX template meeting the submission requirements
-for the 2015 International Conference on Information Systems.
+for the 2018 International Conference on Information Systems.
 
 ## Notes
 
@@ -25,7 +25,6 @@ options in your TeX file. These are demonstrated in `testdoc.tex`.
 ```latex
 \researchtype{}   % Indicate whether this is Completed Research or Research in Progress
 \shorttitle{}     % Give this document a short title (8 words or fewer)
-\track{}          % Indicate which track this will go to.
 ```
 In your preamble, use the following command to add your bibliography:
 
@@ -35,25 +34,25 @@ In your preamble, use the following command to add your bibliography:
 
 and use `\printbibliography` at the end of your document to print the bibliography
 
-## Ubuntu Specific Recommendations 
+## Ubuntu Specific Recommendations
 
 To use the Georgia font, you need to install the MS core fonts:
 
     sudo apt-get install msttcorefonts
 
-For some reason, XeLaTeX complains about a line in the cls file: 
-    
+For some reason, XeLaTeX complains about a line in the cls file:
+
     ! Package xkeyval Error: `TeX' undefined in families `Ligatures'.
 
 I replaced:
-    
+
     \setmainfont[Ligatures={Common,TeX}]{Georgia}
 
-with 
+with
 
     \setmainfont{Georgia}
 
-and it compiled without problems. 
+and it compiled without problems.
 
 =======
 Since I no longer use Natbib, you should now use biblatex commands for
