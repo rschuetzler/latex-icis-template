@@ -17,7 +17,7 @@
 \RequirePackage{graphicx}
 \RequirePackage[labelsep=period,font=bf]{caption}   % Replace caption colon with
                                 % period
-\RequirePackage[margin=1in]{geometry}
+\RequirePackage[margin=1in, bottom=2.4cm]{geometry}
 % \RequirePackage[total={7in,9.25in},top=0.75in,paper=letterpaper]{geometry}
 \RequirePackage{fancyhdr}
 
@@ -65,10 +65,12 @@ hyperref=true, %unsure about this too.
 
 % These are variables set in the frontmatter of the document
 % Not exactly sure if I need this step, but it was in the example I found.
+\let\@conference\@empty
 \let\@researchtype\@empty
 \let\@shorttitle\@empty
 \let\@track\@empty
 
+\newcommand{\conference}[1]{\gdef\@conference{#1}}
 \newcommand{\researchtype}[1]{\gdef\@researchtype{#1}}
 \newcommand{\shorttitle}[1]{\gdef\@shorttitle{#1}}
 \newcommand{\track}[1]{\gdef\@track{#1}}
@@ -102,22 +104,24 @@ hyperref=true, %unsure about this too.
 }
 \setcounter{secnumdepth}{0}
 
+\newcommand{\changefont}{%
+	\fontsize{9}{11}\selectfont
+}
+
 % Header and footer info
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{\textit{\@shorttitle}}
+\fancyhead[R]{\changefont\textit{\@shorttitle}}
 % \fancyhead[LE]{\textit{\@track}}
-\fancyfoot[R]{\textit{Thirty Sixth International Conference on Information Systems, %
-              Fort Worth 2015}\hspace{5mm}\textbf{\thepage}}
+\fancyfoot[R]{\changefont\textit{\@conference}\hspace{5mm}\textbf{\thepage}}
 % \fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Sixth International Conference on Information Systems, %
 %               Fort Worth 2015}}
 
 % No header on the first page. Only a footer
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyhead[R]{\textit{\@shorttitle}}
-    \fancyfoot[R]{\textit{Thirty Sixth International Conference on Information Systems, %
-              Fort Worth 2015}\hspace{5mm}\textbf{\thepage}}
+    \fancyhead[R]{\changefont\textit{\@shorttitle}}
+    \fancyfoot[R]{\changefont\textit{\@conference}\hspace{5mm}\textbf{\thepage}}
   }
 
 % Get rid of the horizontal rules
