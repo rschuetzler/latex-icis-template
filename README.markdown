@@ -1,6 +1,16 @@
 # Description
-This is a LaTeX template meeting the submission requirements
-for the 2018 International Conference on Information Systems.
+This repository provides an update of
+[rschuetzler/latex-icis-template](https://github.com/rschuetzler/latex-icis-template)
+which meets the submission requirements for the 2019 International Conference on
+Information Systems (a paper has been accepted based on this updated template).
+Formatting requirements have been checked very strictly in 2019 (this will probably
+continue in 2020) and changes have been requested for papers that were submitted
+using the last versions of rschuetzler/latex-icis-template.
+
+Unfortunately, the current template breaks compatibility
+with the latex \\ref commands (you need to refer to "Figure 1" instead of
+"Figure~\\ref{label}" and update the numbers manually).
+
 
 ## Notes
 

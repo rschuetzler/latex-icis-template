@@ -4,7 +4,7 @@
 
 \usepackage{graphicx}
 
-\title{ICIS 2018 Munich Paper Title}
+\title{ICIS 2019 Munich Paper Title}
 \researchtype{Research in Progress}
 \shorttitle{This is my test title}
 \conference{Fortieth International Conference on Information Systems, Munich 2019}
@@ -147,15 +147,24 @@ the figure stays in the position, and (2) it does not take up too much
 space. You can ensure the former by double clicking the figure, then go to
 ``Layout'' tab, and select ``In line with text.'' To ensure the latter, use ``Paste
 Special,'' then select ``Picture.'' You can resize the figure to your desired size
-once it is pasted. Look at Figure~\ref{fig:test}.
+once it is pasted. Look at Figure~1.
 
 % Test image
+\vspace{-0.2cm}
 \begin{figure}[h]
-  \centering
-  \includegraphics[scale = 0.45]{testimage.png}
-  \caption{Sample caption. Should be bold, centered, and below} 
-  \label{fig:test}
+	\[
+	%	\hspace*{-0.4cm}
+	\begin{array}{|c|}
+	\hline \\ [-11pt]
+	\includegraphics[scale = 0.45]{testimage.png} \\ [-4pt]
+	\hline
+	\addstackgap[7pt]{{\usefont{T1}{ptm}{b}{n}Figure 1.\hspace{0.09cm} Sample caption. Should be bold, centered, and below}}\\
+	\hline
+	\end{array}
+	\]
+	\caption*{}\label{fig:test} % To remove "Figure number" and legend. But the figure should be named and added manually to the list of figures.
 \end{figure}
+\vspace{-0.9cm}
 
 
 \subsection{Table Style}
@@ -163,24 +172,30 @@ Inserting a table in the text can work well. You may want to adjust the vertical
 spacing of the text in the tables. (In Word, use Format | Paragraph\ldots~and
 then the Line and Page Breaks tab. Generally, text in each field of a table will
 look better if it has equal amounts of spacing above and below it, as in
-Table~\ref{tab:lme-mean}.)
+Table~1.)
 
 This is what a test table might look like. 
 
+% \setlength{\LTleft}{-4pt}
+\bgroup
+\def\arraystretch{1.3}
+\footnotesize
+\vspace{0.8cm}
 \begin{table}[ht]
-\centering
-\caption{Test table with caption} 
-\label{tab:lme-mean}
-\begin{tabular}{rrrrrr}
-  \hline
-            & Treatment 1 & Treatment 2 \\ 
-  \hline
-  Setting A & 125         & 95          \\ 
-  Setting B & 85          & 102         \\ 
-  Setting C & 98          & 85          \\ 
-  \hline
-\end{tabular}
+	\centering
+	\begin{tabular}{|r|r|r|}
+		\hline
+		\multicolumn{3}{|c|}{\normalsize{{\usefont{T1}{ptm}{b}{n}Table 1.\hspace{0.09cm} Test table with caption}}} \rule{0pt}{4ex} \\ [4pt] \hline
+					& Treatment 1 & Treatment 2 \\ \hline
+		Setting A 	& 125         & 95          \\ \hline
+		Setting B 	& 85          & 102         \\ \hline
+		Setting C 	& 98          & 85          \\ \hline
+	\end{tabular}
+	\caption*{}
+	\label{tab:lme-mean}
 \end{table}
+\egroup
+\vspace{-0.2cm}
 
 \section{Language, Style, and Content}
 With regard to spelling and punctuation, you may use any dialect of English
