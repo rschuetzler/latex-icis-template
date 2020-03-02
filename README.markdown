@@ -1,8 +1,8 @@
 # Description
 This repository provides an update of
 [rschuetzler/latex-icis-template](https://github.com/rschuetzler/latex-icis-template)
-which meets the submission requirements for the 2019 International Conference on
-Information Systems (a paper has been accepted based on this updated template).
+which meets the submission requirements for the International Conference on
+Information Systems (a paper has been accepted based on this updated template at ICIS 2019).
 Formatting requirements have been checked very strictly in 2019 (this will probably
 continue in 2020) and changes have been requested for papers that were submitted
 using the last versions of rschuetzler/latex-icis-template.
