@@ -15,15 +15,16 @@
 \RequirePackage{fontspec}
 \RequirePackage{xunicode}
 \RequirePackage{graphicx}
-\RequirePackage[labelsep=period,font=bf]{caption}   % Replace caption colon with
-                                % period
-\RequirePackage[margin=1in, bottom=2.4cm]{geometry}
-% \RequirePackage[total={7in,9.25in},top=0.75in,paper=letterpaper]{geometry}
+\RequirePackage[labelsep=period,font=bf]{caption}
+\RequirePackage[margin=1in, bottom=2.54cm]{geometry}
 \RequirePackage{fancyhdr}
+\RequirePackage{stackengine}
 
 % Get rid of spacing inside lists
 \RequirePackage{enumitem}
 \setlist{noitemsep}
+
+\RequirePackage{xpatch}
 
 \RequirePackage[backend=biber,
 sorting=nyt,
@@ -31,7 +32,8 @@ style=authoryear,
 sortcites=true,
 maxcitenames=2,
 mincitenames=1,
-maxbibnames=100,
+maxbibnames=10,
+useprefix=true,
 date=year,
 url=false,
 urldate=long,
@@ -46,6 +48,38 @@ uniquelist=false,
 block=none, %unsure about this one. hopefully it will be in the style
 hyperref=true, %unsure about this too.
 ]{biblatex}
+
+\DefineBibliographyStrings{english}{%
+	url = {available at}
+}
+
+\RequirePackage[hang,flushmargin,bottom]{footmisc} 
+\renewcommand{\footnoterule}{%
+	\kern -3pt
+	\hrule width 140pt height 0.6pt
+	\kern 9pt
+}
+
+\renewbibmacro*{volume+number+eid}{%
+	\setunit{\addspace}%
+	\printtext[parens]{%
+		\printfield{volume}%
+		\setunit*{\addcolon}%
+		\printfield{number}}%
+	\setunit{\addcomma\space}%
+	\printfield{eid}}
+
+\xpatchbibmacro{date+extradate}{%
+	\printtext[parens]%
+}{%
+	\setunit*{\space}%
+	\printtext%
+}{}{} 
+
+\renewbibmacro{in:}{%
+	\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+
+\DeclareNameAlias{sortname}{last-first}
 
 % \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont[Ligatures={Common,TeX}]{Georgia}
@@ -68,39 +102,37 @@ hyperref=true, %unsure about this too.
 \let\@conference\@empty
 \let\@researchtype\@empty
 \let\@shorttitle\@empty
-\let\@track\@empty
 
 \newcommand{\conference}[1]{\gdef\@conference{#1}}
 \newcommand{\researchtype}[1]{\gdef\@researchtype{#1}}
 \newcommand{\shorttitle}[1]{\gdef\@shorttitle{#1}}
-\newcommand{\track}[1]{\gdef\@track{#1}}
 
 \renewcommand{\maketitle}{%
-  \begin{center} %
-    {\Huge\bfseries\@title\par}
-    {\Large\itshape\@researchtype\par}
-  \end{center}
-  \thispagestyle{plain}\@thanks
+	\begin{center} %
+		{\Huge\bfseries\@title\par}
+		{\Large\itshape\@researchtype\par}
+	\end{center}
+	\thispagestyle{plain}\@thanks
 }
 
 % TODO: Figure out citation style. Of course, MISQ doesn't use APA. 
 
 \renewcommand{\section}{%
-  \@startsection
-    {section}{1}{0pt}{4pt}%
-    {4pt}{\bfseries\LARGE}%
+	\@startsection
+	{section}{1}{0pt}{4pt}%
+	{4pt}{\bfseries\LARGE}%
 }
 
 \renewcommand{\subsection}{%
-  \@startsection
-    {subsection}{2}{0pt}{4pt}%
-    {4pt}{\bfseries\large\itshape}%
+	\@startsection
+	{subsection}{2}{0pt}{4pt}%
+	{4pt}{\bfseries\large\itshape}%
 }
 
 \renewcommand{\subsubsection}{%
-  \@startsection
-    {subsubsection}{3}{0pt}{4pt}%
-    {4pt}{\bfseries}%
+	\@startsection
+	{subsubsection}{3}{0pt}{4pt}%
+	{4pt}{\bfseries}%
 }
 \setcounter{secnumdepth}{0}
 
@@ -112,17 +144,14 @@ hyperref=true, %unsure about this too.
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\changefont\textit{\@shorttitle}}
-% \fancyhead[LE]{\textit{\@track}}
-\fancyfoot[R]{\changefont\textit{\@conference}\hspace{5mm}\textbf{\thepage}}
-% \fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Sixth International Conference on Information Systems, %
-%               Fort Worth 2015}}
+\fancyfoot[R]{\changefont\textit{\@conference}\hspace{4.5mm}\textbf{\thepage}}
 
 % No header on the first page. Only a footer
 \fancypagestyle{plain}{
-    \fancyhf{}
-    \fancyhead[R]{\changefont\textit{\@shorttitle}}
-    \fancyfoot[R]{\changefont\textit{\@conference}\hspace{5mm}\textbf{\thepage}}
-  }
+	\fancyhf{}
+	\fancyhead[R]{\changefont\textit{\@shorttitle}}
+	\fancyfoot[R]{\changefont\textit{\@conference}\hspace{4.5mm}\textbf{\thepage}}
+}
 
 % Get rid of the horizontal rules
 \renewcommand{\headrulewidth}{0pt}
