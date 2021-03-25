@@ -1,6 +1,5 @@
 # Description
-This repository provides an update of
-[rschuetzler/latex-icis-template](https://github.com/rschuetzler/latex-icis-template)
+This repository provides a LaTeX template
 which meets the submission requirements for the International Conference on
 Information Systems (a paper has been accepted based on this updated template at ICIS 2019).
 Formatting requirements have been checked very strictly in 2019 (this will probably
