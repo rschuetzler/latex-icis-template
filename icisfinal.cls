@@ -158,15 +158,13 @@ hyperref=true, %unsure about this too.
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\changefont\textit{\@shorttitle}}
-\fancyfoot[R]{\changefont\textit{\@conference}\hspace{4.5mm}\textbf{\thepage}}
-% \fancyfoot[LE]{\textbf{\thepage}\hspace{5mm}\textit{Thirty Sixth International Conference on Information Systems, %
-%               Fort Worth 2015}}
+\fancyfoot[R]{\changefont\textit{\@conference}\\\textbf{\thepage}}
 
 % No header on the first page. Only a footer
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\fancyhead[R]{\changefont\textit{\@shorttitle}}
-	\fancyfoot[R]{\changefont\textit{\@conference}\hspace{4.5mm}\textbf{\thepage}}
+	\fancyfoot[R]{\changefont\textit{\@conference}\\\textbf{\thepage}}
 }
 
 % Get rid of the horizontal rules

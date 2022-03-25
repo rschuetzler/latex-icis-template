@@ -1,17 +1,17 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass{icisfinal}
+\documentclass{icis}
 
 \usepackage{graphicx}
 \usepackage{xcolor}
 
-\title{ICIS 2021 Austin Paper Title}
+\title{ICIS 2022 Copenhagen Paper Title}
 \researchtype{\textcolor{red}{Indicate Submission Type:} Completed Research Paper, Short Paper, Practitioner Paper, Teaching Case, Panel, and PDW}
-\shorttitle{This is my test title}
-\conference{Forty-Second International Conference on Information Systems, Austin 2021}
+\shorttitle{Short Title up to 8 word}
+\conference{Forty-Third International Conference on Information Systems, Copenhagen 2022}
 
 \usepackage[hidelinks]{hyperref}
-\addbibresource{references.bib}
+\addbibresource{thesis.bib}
 
 \usepackage{tabularx}  % To have the table fill out the page
 
@@ -157,7 +157,7 @@ once it is pasted. Look at Figure~1.
 	%	\hspace*{-0.4cm}
 	\begin{array}{|c|}
 	\hline \\ [-11pt]
-	\includegraphics[scale = 0.45]{testimage.png} \\ [-4pt]
+	\includegraphics[scale = 0.45]{Figures/100_episodes_benchmark_20220105-115141_boxplot.png} \\ [-4pt]
 	\hline
 	\addstackgap[7pt]{{\usefont{T1}{ptm}{b}{n}Figure 1.\hspace{0.09cm} Sample caption. Should be bold, centered, and below}}\\
 	\hline
@@ -185,12 +185,12 @@ This is what a test table might look like.
 \begin{table}[ht]
 	\centering
 	\begin{tabular}{|r|r|r|}
-		\hline
-		\multicolumn{3}{|c|}{\normalsize{{\usefont{T1}{ptm}{b}{n}Table 1.\hspace{0.09cm} Test table with caption}}} \rule{0pt}{4ex} \\ [4pt] \hline
+        \hline
 					& Treatment 1 & Treatment 2 \\ \hline
 		Setting A 	& 125         & 95          \\ \hline
 		Setting B 	& 85          & 102         \\ \hline
-		Setting C 	& 98          & 85          \\ \hline
+		Setting C 	& 98          & 85          \\ \hline 
+		\multicolumn{3}{|c|}{\normalsize{{\usefont{T1}{ptm}{b}{n}Table 1. \hspace{0.09cm} A Very Nice Table}}} \rule{0pt}{3ex} \\ [4pt] \hline
 	\end{tabular}
 	\caption*{}
 	\label{tab:lme-mean}
