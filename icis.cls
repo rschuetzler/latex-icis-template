@@ -16,7 +16,7 @@
 \RequirePackage{xunicode}
 \RequirePackage{graphicx}
 \RequirePackage[labelsep=period,font=bf]{caption}
-\RequirePackage[margin=1in, bottom=2.54cm]{geometry}
+\RequirePackage[margin=1in, bottom=2.54cm, total={6.5in, 9in}]{geometry}
 \RequirePackage{fancyhdr}
 \RequirePackage{stackengine}
 
@@ -144,13 +144,13 @@ hyperref=true, %unsure about this too.
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\changefont\textit{\@shorttitle}}
-\fancyfoot[R]{\changefont\textit{\@conference}\hspace{4.5mm}\textbf{\thepage}}
+\fancyfoot[R]{\changefont\textit{\@conference}\\\textbf{\thepage}}
 
 % No header on the first page. Only a footer
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\fancyhead[R]{\changefont\textit{\@shorttitle}}
-	\fancyfoot[R]{\changefont\textit{\@conference}\hspace{4.5mm}\textbf{\thepage}}
+	\fancyfoot[R]{\changefont\textit{\@conference}\\\textbf{\thepage}}
 }
 
 % Get rid of the horizontal rules
