@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-\documentclass{icisfinal}
+\documentclass{icis}
 
 \usepackage{graphicx}
 \usepackage{xcolor}
@@ -64,42 +64,29 @@ material. The template file contains specially formatted styles (e.g.,
 \texttt{Normal, Heading, Bullet, References, Title, Author, Affiliation}) that
 are designed to reduce the work in formatting your final submission.
 
-\section{Citations}
-
-Citations should be done in the MISQ style. For direction, see the MISQ website
-(\url{http://www.misq.org/manuscript-guidelines}), specifically the section on the
-MISQ references format. Getting bibtex to do that is one goal of this
-template. This is a test citation of a single author book
-\autocite{bonini_simulation_1963}, and a two author book section
-\autocite{chenhall_formal_1989}. Next comes the scary 4 author et
-al. \autocite{zhang2006}, and a multi-cite cite \autocite{bonini_simulation_1963,
-  ackoff_management_1961}.  I'll add a website \autocite{Ahlers2013} and the R manual
-\autocite{R2014} just to test things out. Check the references section at the end to see if
-these are properly arranged.
-
 \section{Page Size}
-On each page, your material (not including the header and footer) should fit
-within a rectangle of 18 x 23.5 cm (7 x 9.25 in.), centered on a US letter page,
-beginning 1.9 cm (.75 in.) from the top of the page.  Please adhere to the US
-letter size only (hopefully Word or other word processors can help you with
-it). If you cannot do so, please contact the review coordinator for
-assistance. All final publications will be formatted and displayed in US letter
-size. Right margins should be justified, not ragged. All margins must measure 1"
-(2.5 cm) around. Beware, especially when using this template on a Macintosh,
-Word may change these dimensions in unexpected ways.
+On each page, your material (not including the header and footer) should fit within a rectangle of 16.5 x 22.8 cm (6.5 x 9 in.), centered on a US letter page, beginning 1.27 cm (0.5 in.) from the top of the page.  Please adhere to the US letter size only (in MS Word, you can check the page format in the menu: \textbf{File --> Page Setup}). If you cannot do so, please contact the review coordinator for assistance. All final publications will be formatted and displayed in \textbf{US letter size. Right margins should be justified}, not ragged. All margins must measure 1” (2.5 cm) around. Beware, especially when using this template on a Macintosh, Word may change these dimensions in unexpected ways.
+
+Please ensure your manuscript complies with the following instructions:
+\begin{itemize}
+    \item Line spacing should be single (exactly 1.0);
+    \item Margins should be 1 inch (2.54 cm);
+    \item Do not change character or word spacing;
+    \item Please do not use double spaces between sentences – this is a tradition no longer necessary on modern word processors;
+    \item Please do not edit the styles in this template;
+    \item Please ensure all text is justified, not “ragged” ( = left-aligned).
+\end{itemize}
+Non-compliance of these instructions may lead to desk rejection of your paper.
 
 \section{Length}
 Each type of submission (completed research papers, research-in-progress papers,
 teaching cases, and panels) has specific page length requirements. See
-additional requirements specific to each type of submission. Any submission that
-exceeds page length limits will be rejected without review.
+additional requirements specific to each type of submission in the \href{https://icis2022.aisconferences.org/submissions/types-of-submissions/}{Types of Submissions \& Instructions} document. \textbf{Any submission that
+exceeds page length limits will be rejected without review}.
 
-Completed research papers must not exceed fourteen (14) single-spaced pages. The
-14 page count includes all text, figures, tables and appendices. Note that this
-page count excludes the cover page, abstract, keywords and references. 
-
-This paper length is intended to encourage authors to publish full-length papers
-in journals or other outlets at a later date.
+\section{Title}
+Your paper’s title should be using the “Title” style in this template (which is configured as Georgia 20-point bold). Ensure proper capitalization within your title (i.e. “The Next Frontier of Information Systems” versus “the next frontier of Information systems.” 
+All proper nouns should be capitalized. Articles (the, a), coordinating conjunctions (and, but, or, for, nor, etc.) should not be capitalized, unless, of course, they are used as the first word in the title. Likewise for prepositions (on, at, to, from, by, etc.).
 
 \section{Normal or Body Text}
 Please use a 10-point Georgia font (similar to Times New Roman, but more easily
@@ -130,9 +117,7 @@ Place figures and tables close to the relevant text (or where they are
 referenced in the text).  Captions should be Georgia 10-point bold (Caption
 Style in this template file).  They should be numbered (e.g., ``Table 1'' or
 ``Figure 2''), centered and placed beneath the figure or table.  Please note that
-the words ``Figure'' and ``Table'' should be spelled out (e.g., ``Figure'' rather than
-``Fig.'') wherever they occur. The proceedings will be made available online, thus
-color figures are possible.
+the words ``Figure'' and ``Table'' should be spelled out (e.g., ``Figure'' rather than ``Fig.'') wherever they occur. The proceedings will be made available online, thus color figures are possible.
 
 \subsection{Inserting Images}
 Occasionally MS Word generates larger-than-necessary PDF files when images
@@ -157,7 +142,7 @@ once it is pasted. Look at Figure~1.
 	%	\hspace*{-0.4cm}
 	\begin{array}{|c|}
 	\hline \\ [-11pt]
-	\includegraphics[scale = 0.45]{testimage.png} \\ [-4pt]
+	\includegraphics[scale = 0.45]{Figures/100_episodes_benchmark_20220105-115141_boxplot.png} \\ [-4pt]
 	\hline
 	\addstackgap[7pt]{{\usefont{T1}{ptm}{b}{n}Figure 1.\hspace{0.09cm} Sample caption. Should be bold, centered, and below}}\\
 	\hline
@@ -217,6 +202,25 @@ international audience, please pay attention to the following:
   gendered words (chairman, manpower, man-months). Use inclusive language that
   is gender-neutral (e.g., they, s/he, chair, staff, staff-hours, person-years).
 \end{itemize}
+
+\section{Conclusion}
+It is important that you write for a general audience. It is also important that your work is presented in a professional fashion. This guideline is intended to help you achieve that goal. By adhering to the guideline, you also help the conference organizers tremendously in reducing our workload and ensuring impressive presentation of your conference paper. We thank you very much for your cooperation and look forward to receiving a professional looking, camera-ready version! 
+
+\section{Acknowledgements (optional)}
+Please do not add acknowledgements to your original submission because it will help identify authors. Acknowledgements may be added later, if the paper is accepted.
+
+\section{Citations}
+
+References are to be formatted using the new MIS Quarterly style (\url{http://www.misq.org/manuscript-guidelines} under MISQ References Format). References must be complete, i.e., include, as appropriate, volume, number, month, publisher, city and state, editors, last name \& initials of all authors, page numbers, etc. Getting bibtex to do that is one goal of this
+template. This is a test citation of a single author book
+\autocite{bonini_simulation_1963}, and a two author book section
+\autocite{chenhall_formal_1989}. Next comes the scary 4 author et
+al. \autocite{zhang2006}, and a multi-cite cite \autocite{bonini_simulation_1963,
+  ackoff_management_1961}.  I'll add a website \autocite{Ahlers2013} and the R manual
+\autocite{R2014} just to test things out. Check the references section at the end to see if these are properly arranged.
+
+Your references should comprise only published materials accessible to the public. Proprietary information may not be cited.
+References should be ordered in alphabetic order.
 
 % \bibliographystyle{misq}
 % \bibliography{references}

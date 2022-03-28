@@ -16,7 +16,7 @@
 \RequirePackage{xunicode}
 \RequirePackage{graphicx}
 \RequirePackage[labelsep=period,font=bf]{caption}
-\RequirePackage[margin=1in, bottom=2.54cm]{geometry}
+\RequirePackage[margin=1in, bottom=2.54cm, total={6.5in, 9in}]{geometry}
 \RequirePackage{fancyhdr}
 \RequirePackage{stackengine}
 
