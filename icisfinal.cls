@@ -26,32 +26,24 @@
 
 \RequirePackage{xpatch}
 
-\RequirePackage[backend=biber,
-sorting=nyt,
-style=authoryear,
-sortcites=true,
-maxcitenames=2,
-mincitenames=1,
-maxbibnames=10,
-useprefix=true,
-date=year,
-url=false,
-urldate=long,
-isbn=false,
-firstinits=true,
-doi=false,
-terseinits=false,
-autocite=inline,
-uniquename=false,
-dashed=false,
-uniquelist=false,
-block=none, %unsure about this one. hopefully it will be in the style
-hyperref=true, %unsure about this too.
+\RequirePackage[
+    	backend=biber,       % Use biber as the backend
+    	style=apa,           % Set the bibliography style to APA
+	sortcites=true,      % Sort citations when multiple are given
+	maxcitenames=1,      % Show first author name only, with et al when more than one authors 
+	maxbibnames=20,      % Same for bibliography: show up to 20 author names
+	uniquelist=false,    % Do not add distinguishing letters to repeated author lists
+	date=year,           % Show only the year in citations and bibliographies
+	doi=true,            % Include DOI in the bibliography entries
+	isbn=false,          % Do not display ISBN numbers
+	url=true,            % Show URLs for web sources
+	eprint=false,        % Do not show eprint fields
 ]{biblatex}
 
-\DefineBibliographyStrings{english}{%
-	url = {available at}
-}
+\AtEveryBibitem{\clearfield{note}}
+\AtEveryBibitem{\clearfield{annotation}}
+
+\setlength{\bibhang}{0.63cm}
 
 \RequirePackage[hang,flushmargin,bottom]{footmisc} 
 \renewcommand{\footnoterule}{%
