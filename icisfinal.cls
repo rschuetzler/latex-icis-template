@@ -27,7 +27,7 @@
 \RequirePackage{xpatch}
 
 \RequirePackage[
-    backend=biber,       % Use biber as the backend
+	backend=biber,       % Use biber as the backend
 	style=apa,           % Set the bibliography style to APA
 	sortcites=true,      % Sort citations when multiple are given
 	maxcitenames=1,      % Show first author name only, with et al when more than one authors 
