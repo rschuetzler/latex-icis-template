@@ -27,8 +27,8 @@
 \RequirePackage{xpatch}
 
 \RequirePackage[
-    	backend=biber,       % Use biber as the backend
-    	style=apa,           % Set the bibliography style to APA
+	backend=biber,       % Use biber as the backend
+	style=apa,           % Set the bibliography style to APA
 	sortcites=true,      % Sort citations when multiple are given
 	maxcitenames=1,      % Show first author name only, with et al when more than one authors 
 	maxbibnames=20,      % Same for bibliography: show up to 20 author names
@@ -108,6 +108,7 @@
 }
 
 % TODO: Figure out citation style. Of course, MISQ doesn't use APA. 
+% UPDATED: Now, MISQ uses APA.
 
 \renewcommand{\section}{%
 	\@startsection
